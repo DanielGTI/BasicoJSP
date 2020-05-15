@@ -6,6 +6,7 @@
     <body style="background-color: azure">
         <%
             String nota1, nota2;
+            int n;
             float av1 = 0F;
             float av2 = 0F;
             nota1 = request.getParameter("av1");
@@ -21,12 +22,35 @@
                         + "com notas negativas<br>");
             } else {
                 float media = (av1 + av2) / 2;
-                out.println("Média: " + media + "<br>");
-
+                // REPETIÇÃO FOR
+                for(n = 1; n <= (int)media/2; n++ ){
+                    out.println("<br>Média: " + media + "");
+                }
+                
+                
+                
                 if (media >= 6.0) {
-                    out.println("<br>Aluno Aprovado<br>Parabéns!");
+                    // int n;   DECLARAÇÃO DE n
+                    n = 1;
+                    out.println("<br>Aluno Aprovado<br>");
+                    
+                    // Repetição While
+                    while(n <= (int)media){
+                        out.println("<br>Parabéns! (" + n + ")");
+                        n++;
+                    }
+                    
                 } else {
-                    out.println("<br>Aluno Reprovado<br>Tente novamente.");
+                    // Repetição Do While
+                    
+                    n = 1;
+                    out.println("<br>Aluno Reprovado");
+                    
+                    // REPETIÇÃO
+                    do{
+                        out.println("<br>Tente novamente (" + n + ")");
+                        n++;
+                    }while(n <= ((int)media));  
                 }
 
             }
