@@ -13,7 +13,7 @@
                     <% 
                         int n;
                         for(n = 1; n <= 3; n++){
-                            out.println("Aluno (RA) " + n + ":<br>");
+                            out.println("Aluno " + n + ":<br>");
                             out.println("Av1: <input type=\"text\" name=\"av1_"+ n +"\" maxlength=\"5\"><br>");
                             out.println("Av2: <input type=\"text\" name=\"av2_"+ n +"\" maxlength=\"5\"><br>");
                             out.println("<br>");
